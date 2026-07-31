@@ -3,692 +3,305 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joelene Wilson — Executive Administrative Professional</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Joelene Wilson — Virtual Assistant | Administrative Support | Content Creation & Social Media Management</title>
 <style>
-  :root{
-    --ink:#3F5B44;
-    --ink-soft:#5C6B5E;
-    --paper:#FBFAF4;
-    --paper-card:#FFFFFF;
-    --brass:#C97A6D;
-    --brass-dark:#B5695D;
-    --green:#8FA687;
-    --rule:#E4E1D3;
-    --rule-soft:#EDEADD;
-    --stamp-red:#B5695D;
-    --shadow: 0 1px 0 rgba(63,91,68,0.06), 0 8px 24px rgba(63,91,68,0.08);
+  :root {
+    --sage: #6E7E64;
+    --sage-dark: #56634E;
+    --sage-light: #E8ECE4;
+    --grey: #595959;
+    --grey-dark: #2B2B2B;
+    --cream: #FAFAF7;
+    --border: #DADFD5;
   }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--grey-dark);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    font-size:16px;
-    line-height:1.6;
+  /* Nav */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,250,247,0.92); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
   }
+  nav.site { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; max-width: 980px; margin: 0 auto; }
+  .brand { font-weight: 700; letter-spacing: 0.08em; color: var(--sage-dark); font-size: 15px; }
+  .navlinks { display: flex; gap: 26px; font-size: 14px; color: var(--grey); }
+  .navlinks a:hover { color: var(--sage-dark); }
 
-  h1,h2,h3{
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;
-    font-weight:600;
-    letter-spacing:0.005em;
-    margin:0;
-    color:var(--ink);
+  /* Hero */
+  .hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.06em; color: var(--sage-dark);
+    background: var(--sage-light); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 22px;
   }
+  .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); display: inline-block; }
+  .hero h1 { font-size: 44px; color: var(--grey-dark); margin-bottom: 6px; }
+  .hero .role {
+    font-size: 17px; font-weight: 600; color: var(--sage-dark);
+    margin-bottom: 22px; letter-spacing: 0.01em;
+  }
+  .hero .lede { font-size: 17px; color: var(--grey); max-width: 620px; margin-bottom: 30px; }
+  .cta-row { display: flex; gap: 14px; margin-bottom: 46px; flex-wrap: wrap; }
+  .btn {
+    padding: 11px 22px; border-radius: 6px; font-size: 14px; font-weight: 600;
+  }
+  .btn-primary { background: var(--sage); color: #fff; }
+  .btn-primary:hover { background: var(--sage-dark); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--grey-dark); }
+  .btn-ghost:hover { border-color: var(--sage); color: var(--sage-dark); }
+  .stats { display: flex; gap: 48px; flex-wrap: wrap; }
+  .stat .num { font-size: 30px; font-weight: 700; color: var(--sage-dark); }
+  .stat .label { font-size: 13px; color: var(--grey); }
 
-  .label{
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.72rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--brass-dark);
+  section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--sage-dark); font-weight: 700; margin-bottom: 10px;
   }
+  h2.sect { font-size: 28px; color: var(--grey-dark); margin-bottom: 26px; }
 
-  a{color:inherit;}
+  /* About */
+  .about-text p { color: var(--grey); margin-bottom: 16px; max-width: 720px; }
+  .about-text strong { color: var(--grey-dark); }
+  .ways {
+    margin-top: 30px; background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 22px 26px;
+  }
+  .ways h3 { font-size: 14px; color: var(--sage-dark); margin-bottom: 14px; letter-spacing: 0.02em; }
+  .ways ul { list-style: none; }
+  .ways li { position: relative; padding-left: 20px; margin-bottom: 10px; color: var(--grey); font-size: 15px; }
+  .ways li::before { content: "—"; position: absolute; left: 0; color: var(--sage); }
 
-  /* ===== Layout shell ===== */
-  .shell{
-    display:grid;
-    grid-template-columns:220px 1fr;
-    max-width:1200px;
-    margin:0 auto;
-  }
+  /* Skills */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .skill-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 22px 24px; }
+  .skill-card h3 { font-size: 15px; color: var(--sage-dark); margin-bottom: 14px; }
+  .skill-card ul { list-style: none; }
+  .skill-card li { font-size: 14px; color: var(--grey); padding: 5px 0; border-bottom: 1px dashed var(--border); }
+  .skill-card li:last-child { border-bottom: none; }
 
-  /* ===== Tab index nav ===== */
-  .index-nav{
-    position:sticky;
-    top:0;
-    align-self:start;
-    height:100vh;
-    padding:48px 0 48px 32px;
-    display:flex;
-    flex-direction:column;
-    gap:2px;
+  /* Work */
+  .work-item {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 26px 28px; margin-bottom: 20px;
   }
-  .index-nav .brand{
-    font-family:'Inter',sans-serif;
-    font-size:1.05rem;
-    font-weight:700;
-    letter-spacing:0.04em;
-    margin-bottom:40px;
-    color:var(--ink);
-  }
-  .index-nav .brand span{
-    display:block;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.65rem;
-    font-weight:400;
-    letter-spacing:0.1em;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    margin-top:4px;
-  }
-  .tab{
-    position:relative;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:12px 18px;
-    background:var(--paper-card);
-    border:1px solid var(--rule);
-    border-right:none;
-    border-radius:8px 0 0 8px;
-    margin-right:-1px;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.78rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    text-decoration:none;
-    color:var(--ink-soft);
-    transition:transform .25s ease, color .25s ease, background .25s ease;
-  }
-  .tab:hover{ transform:translateX(-4px); color:var(--ink); }
-  .tab.active{
-    background:#fff;
-    color:var(--ink);
-    font-weight:500;
-    box-shadow:var(--shadow);
-  }
-  .tab .dot{
-    width:6px;height:6px;border-radius:50%;
-    background:var(--rule);
-    flex-shrink:0;
-  }
-  .tab.active .dot{ background:var(--brass); }
+  .work-item.featured { border-color: var(--sage); box-shadow: 0 0 0 1px var(--sage); }
+  .work-tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage-dark); font-weight: 700; margin-bottom: 6px; }
+  .work-item h3 { font-size: 19px; color: var(--grey-dark); margin-bottom: 4px; }
+  .work-item .role { font-size: 14px; color: var(--grey); margin-bottom: 12px; }
+  .work-item p.desc { color: var(--grey); font-size: 15px; margin-bottom: 14px; }
+  .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .pill { font-size: 12px; background: var(--sage-light); color: var(--sage-dark); padding: 4px 10px; border-radius: 999px; }
+  .work-links { display: flex; gap: 16px; flex-wrap: wrap; }
+  .work-links a { font-size: 14px; font-weight: 600; color: var(--sage-dark); }
+  .work-links a:hover { text-decoration: underline; }
 
-  /* ===== Main content ===== */
-  main{
-    padding:64px 40px 40px 40px;
-    border-left:1px solid var(--rule);
-    min-height:100vh;
-  }
-  section{
-    padding:60px 0;
-    border-bottom:1px dashed var(--rule);
-    opacity:0;
-    transform:translateY(14px);
-    transition:opacity .6s ease, transform .6s ease;
-  }
-  section.visible{opacity:1; transform:translateY(0);}
-  section:last-of-type{ border-bottom:none; }
+  /* Contact */
+  .contact-box { text-align: center; padding: 40px 0 10px; }
+  .contact-box h2 { font-size: 30px; margin-bottom: 12px; }
+  .contact-box p { color: var(--grey); margin-bottom: 26px; }
+  footer { text-align: center; padding: 26px 0; font-size: 13px; color: var(--grey); }
 
-  /* ===== Hero ===== */
-  #hero{
-    padding-top:8px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:6px;
-  }
-  .status-tag{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    width:fit-content;
-    padding:6px 12px;
-    border:1px solid var(--rule);
-    border-radius:20px;
-    background:var(--paper-card);
-    margin:0 auto 18px auto;
-  }
-  .name-signature{
-    font-family:'Cormorant Garamond',serif;
-    font-size:clamp(2.8rem, 7vw, 4.6rem);
-    color:var(--ink);
-    line-height:1;
-    margin:0;
-  }
-  .rule-flourish{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin:20px auto 16px auto;
-    max-width:320px;
-  }
-  .rule-flourish .line{ flex:1; height:1px; background:var(--rule); }
-  .rule-flourish .dot{ width:5px; height:5px; border-radius:50%; background:var(--brass); flex-shrink:0; }
-  .rule-flourish .dot.alt{ background:var(--green); }
-  .role-line{
-    font-family:'Cormorant Garamond',serif;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-  }
-  .role-line.primary{ font-size:0.95rem; color:var(--ink); margin-bottom:6px; }
-  .role-line.secondary{ font-size:0.8rem; color:var(--brass-dark); margin-bottom:22px; }
-  .hero-sub{
-    font-size:1.1rem;
-    color:var(--ink-soft);
-    max-width:52ch;
-    margin:0 auto 8px auto;
-  }
-  .hero-actions{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:14px;
-  }
-  .btn{
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.8rem;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:6px;
-    display:inline-block;
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .btn-primary{
-    background:var(--ink);
-    color:var(--paper);
-  }
-  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 6px 16px rgba(28,35,51,0.25); }
-  .btn-ghost{
-    border:1px solid var(--ink);
-    color:var(--ink);
-  }
-  .btn-ghost:hover{ transform:translateY(-2px); background:#fff; }
-
-  .hero-strip{
-    display:flex;
-    gap:28px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:18px;
-    padding-top:24px;
-    border-top:1px solid var(--rule-soft);
-    width:100%;
-    max-width:480px;
-  }
-  .strip-item{ text-align:center; }
-  .strip-item .num{
-    font-family:'Cormorant Garamond',serif;
-    font-size:1.5rem;
-    color:var(--green);
-  }
-  .strip-item .cap{
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.68rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-  }
-
-  /* ===== Section headers ===== */
-  .sec-head{
-    display:flex;
-    align-items:baseline;
-    gap:14px;
-    margin-bottom:30px;
-  }
-  .sec-head h2{ font-size:2.2rem; }
-  .sec-head .label{ white-space:nowrap; }
-  .sec-line{
-    flex:1;
-    height:1px;
-    background:var(--rule);
-  }
-
-  /* ===== About ===== */
-  #about .about-grid{
-    display:grid;
-    grid-template-columns:1.3fr 1fr;
-    gap:40px;
-    align-items:start;
-  }
-  #about p{ color:var(--ink-soft); margin:0 0 14px 0; }
-  .about-card{
-    background:var(--paper-card);
-    border:1px solid var(--rule);
-    border-radius:10px;
-    padding:22px;
-  }
-  .about-card .label{ margin-bottom:12px; display:block; }
-  .about-card ul{ margin:0; padding-left:18px; color:var(--ink-soft); }
-  .about-card li{ margin-bottom:8px; }
-
-  /* ===== Skills ===== */
-  .skills-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-  }
-  .skill-card{
-    background:var(--paper-card);
-    border:1px solid var(--rule);
-    border-radius:10px;
-    padding:24px;
-    position:relative;
-    overflow:hidden;
-  }
-  .skill-card::before{
-    content:"";
-    position:absolute;
-    top:0; left:0;
-    width:100%; height:4px;
-    background:var(--tab-color, var(--brass));
-  }
-  .skill-card h3{ font-size:1.35rem; margin-bottom:14px; }
-  .skill-card ul{ list-style:none; margin:0; padding:0; }
-  .skill-card li{
-    font-size:0.92rem;
-    color:var(--ink-soft);
-    padding:7px 0;
-    border-top:1px dashed var(--rule-soft);
-  }
-  .skill-card li:first-child{ border-top:none; }
-
-  /* ===== Portfolio / Case Files ===== */
-  .files{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-  }
-  .case-file{
-    position:relative;
-    background:var(--paper-card);
-    border:1px solid var(--rule);
-    border-radius:4px 10px 10px 10px;
-    padding:26px 26px 22px 26px;
-    display:grid;
-    grid-template-columns:auto 1fr auto;
-    gap:22px;
-    align-items:start;
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .case-file:hover{ transform:translateY(-3px); box-shadow:var(--shadow); }
-  .order-badge{
-    width:38px;height:38px;border-radius:50%;
-    background:var(--ink);color:var(--paper);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.85rem;
-    flex-shrink:0;
-  }
-  .file-body h3{ font-size:1.5rem; margin-bottom:6px; }
-  .file-body .role{
-    font-size:0.85rem;
-    color:var(--brass-dark);
-    font-family:'Cormorant Garamond',serif;
-    letter-spacing:0.03em;
-    margin-bottom:12px;
-    display:block;
-  }
-  .file-body p{ color:var(--ink-soft); margin:0 0 14px 0; max-width:60ch; }
-  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
-  .chip{
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.68rem;
-    letter-spacing:0.03em;
-    padding:5px 10px;
-    border:1px solid var(--rule);
-    border-radius:20px;
-    color:var(--ink-soft);
-    background:#fff;
-  }
-  .file-link{
-    align-self:start;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.75rem;
-    text-decoration:none;
-    color:var(--ink);
-    border:1px solid var(--ink);
-    padding:9px 14px;
-    border-radius:6px;
-    white-space:nowrap;
-    transition:background .2s ease, color .2s ease;
-  }
-  .file-link:hover{ background:var(--ink); color:var(--paper); }
-
-  .featured-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.65rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--stamp-red);
-    border:1px solid var(--stamp-red);
-    padding:3px 9px;
-    border-radius:4px;
-    transform:rotate(-2deg);
-    margin-bottom:10px;
-  }
-
-  /* ===== Contact ===== */
-  #contact{
-    display:flex;
-    flex-direction:column;
-    gap:24px;
-  }
-  .contact-card{
-    background:var(--ink);
-    color:var(--paper);
-    border-radius:12px;
-    padding:44px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:24px;
-  }
-  .contact-card h2{ color:var(--paper); font-size:2rem; margin-bottom:10px; }
-  .contact-card p{ color:#B8BECC; margin:0; max-width:42ch; }
-  .contact-links{ display:flex; gap:12px; flex-wrap:wrap; }
-  .contact-card .btn-primary{ background:var(--brass); color:var(--ink); }
-  .contact-card .btn-ghost{ border-color:var(--paper); color:var(--paper); }
-  .contact-card .btn-ghost:hover{ background:var(--paper); color:var(--ink); }
-  footer{
-    text-align:center;
-    padding:30px 0 10px 0;
-    font-family:'Cormorant Garamond',serif;
-    font-size:0.7rem;
-    color:var(--ink-soft);
-    letter-spacing:0.05em;
-  }
-
-  /* ===== Mobile ===== */
-  @media (max-width: 880px){
-    .shell{ grid-template-columns:1fr; }
-    .index-nav{
-      position:sticky;
-      top:0;
-      height:auto;
-      flex-direction:row;
-      overflow-x:auto;
-      padding:16px 20px;
-      background:var(--paper);
-      border-bottom:1px solid var(--rule);
-      z-index:10;
-      align-items:center;
-      gap:8px;
-    }
-    .index-nav .brand{ display:none; }
-    .tab{
-      border-radius:20px;
-      border:1px solid var(--rule);
-      flex-shrink:0;
-    }
-    main{ border-left:none; padding:36px 20px; }
-    #about .about-grid{ grid-template-columns:1fr; }
-    .skills-grid{ grid-template-columns:1fr; }
-    .case-file{ grid-template-columns:1fr; }
-    .order-badge{ margin-bottom:6px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ transition:none !important; scroll-behavior:auto !important; }
-    section{ opacity:1; transform:none; }
-  }
-  /* Legibility tuning for Cormorant Garamond used as label/UI text */
-  .label, .tab, .btn, .role-line, .strip-item .cap, .chip, .file-link, .order-badge, footer{
-    font-weight:600;
-    letter-spacing:0.1em;
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 32px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .navlinks { display: none; }
+    .stats { gap: 30px; }
   }
 </style>
 </head>
 <body>
 
-<div class="shell">
-  <nav class="index-nav" id="indexNav">
-    <div class="brand">JOELENE<span>Organised · Reliable · Remote-Ready</span></div>
-    <a class="tab" href="#hero" data-target="hero"><span class="dot"></span>Home</a>
-    <a class="tab" href="#about" data-target="about"><span class="dot"></span>About</a>
-    <a class="tab" href="#skills" data-target="skills"><span class="dot"></span>Skills</a>
-    <a class="tab" href="#work" data-target="work"><span class="dot"></span>Work</a>
-    <a class="tab" href="#contact" data-target="contact"><span class="dot"></span>Contact</a>
+<header class="site">
+  <nav class="site">
+    <div class="brand">JOELENE WILSON</div>
+    <div class="navlinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
+</header>
 
-  <main>
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="status">Open to remote work</div>
+    <h1>Joelene Wilson</h1>
+    <div class="role">Virtual Assistant | Administrative Support | Content Creation &amp; Social Media Management</div>
+    <p class="lede">I bring order and follow-through to everything I take on — from managing documents, schedules, and correspondence, to running digital marketing campaigns and content for grassroots organisations, all delivered remotely with the same consistency and care.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#work">View My Work</a>
+      <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">4</div><div class="label">Platforms managed</div></div>
+      <div class="stat"><div class="num">0</div><div class="label">Marketing budget used</div></div>
+      <div class="stat"><div class="num">100%</div><div class="label">Self-directed delivery</div></div>
+      <div class="stat"><div class="num">70 WPM</div><div class="label">Certified typing, 98% accuracy</div></div>
+    </div>
+  </div>
+</section>
 
-    <section id="hero">
-      <div class="status-tag">
-        <span class="label">Status</span>
-        <span style="font-size:0.85rem;">Open to remote work</span>
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">01 — Profile</div>
+    <h2 class="sect">About</h2>
+    <div class="about-text">
+      <p>I am an administrative professional who also manages digital marketing and content for grassroots organisations — applying the same consistency and attention to detail across both, whether maintaining organised systems and records or keeping a content calendar on schedule.</p>
+      <p>My hands-on experience spans over ten years of typing, document preparation, and general office support, paired with <strong>several months of self-taught digital marketing and content writing</strong> — built entirely on a zero-budget, results-first basis since January 2026.</p>
+      <p>For D&amp;D specifically, the role extends well beyond content and campaigns — serving as the association's main point of contact, maintaining its databases, capturing and processing data accurately, and managing all correspondence.</p>
+      <p>I run <strong>ChessChat</strong>, a community storytelling site and social presence built around the tagline "Every Player Has a Story," managing promotion and content for two chess organisations. That work has sharpened exactly the skills a busy office or remote team needs: organising information clearly, writing copy that lands, keeping platforms consistent, and following through without being chased.</p>
+      <p>I am now looking to bring that same reliability to a remote administrative, marketing, or content support role.</p>
+    </div>
+    <div class="ways">
+      <h3>WAYS OF WORKING</h3>
+      <ul>
+        <li>Primary point of contact for stakeholders and members</li>
+        <li>Database maintenance and accurate data capture</li>
+        <li>Strong written communication — copy, correspondence, documentation</li>
+        <li>Self-starter — used to working with limited resources and no supervision</li>
+        <li>Quick to learn new tools, including Airtable and AI assistants like ChatGPT and Claude</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">02 — Capabilities</div>
+    <h2 class="sect">Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Administration</h3>
+        <ul>
+          <li>Data capture &amp; typing — certified 70 WPM, 98% accuracy</li>
+          <li>Document preparation &amp; formatting</li>
+          <li>Database maintenance &amp; records management</li>
+          <li>Scheduling &amp; general admin support</li>
+          <li>Correspondence &amp; inbox management</li>
+          <li>Airtable database administration</li>
+          <li>Salesforce Associate certified (credential; Airtable is my day-to-day CRM)</li>
+        </ul>
       </div>
-      <h1 class="name-signature">Joelene Wilson</h1>
-      <div class="rule-flourish"><span class="line"></span><span class="dot"></span><span class="dot alt"></span><span class="line"></span></div>
-      <div class="role-line primary">Executive Administrative Professional</div>
-      <div class="role-line secondary">Bringing Order to Every Project</div>
-      <p class="hero-sub">I bring order and follow-through to everything I take on — from managing documents, schedules, and correspondence, to running digital marketing campaigns and content for grassroots organisations, all delivered remotely with the same consistency and care.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">View My Work</a>
-        <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+      <div class="skill-card">
+        <h3>Digital Marketing</h3>
+        <ul>
+          <li>Social media management (Facebook &amp; Instagram)</li>
+          <li>Zero-budget, grassroots growth strategy</li>
+          <li>Campaign &amp; event promotion</li>
+          <li>Community engagement &amp; page moderation</li>
+          <li>Canva &amp; CapCut for video and graphic design</li>
+          <li>HubSpot (self-taught)</li>
+        </ul>
       </div>
-      <div class="hero-strip">
-        <div class="strip-item">
-          <div class="num">4</div>
-          <div class="cap">Platforms managed</div>
-        </div>
-        <div class="strip-item">
-          <div class="num">0</div>
-          <div class="cap">Marketing budget used</div>
-        </div>
-        <div class="strip-item">
-          <div class="num">100%</div>
-          <div class="cap">Self-directed delivery</div>
-        </div>
+      <div class="skill-card">
+        <h3>Content Writing</h3>
+        <ul>
+          <li>Blog &amp; community storytelling</li>
+          <li>WordPress site management</li>
+          <li>Copywriting for promotional material</li>
+          <li>SEO-aware writing</li>
+          <li>Editing &amp; proofreading</li>
+          <li>AI tools (ChatGPT &amp; Claude) for research and drafting</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section id="about">
-      <div class="sec-head">
-        <h2>About</h2>
-        <span class="label">01 — Profile</span>
-        <div class="sec-line"></div>
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow">03 — Where I've Made an Impact</div>
+    <h2 class="sect">Selected Work</h2>
+
+    <div class="work-item featured">
+      <div class="work-tag">★ Featured campaign</div>
+      <h3>D&amp;D — Durban &amp; District School Chess Association</h3>
+      <div class="role">Social media management + campaign support &amp; video content</div>
+      <p class="desc">Manage the D&amp;D Facebook page and support the association's advertising campaigns — contributing creative direction (including proposing the redesign of the PoT campaign poster with imagery of past delegates and endorsement quotes) and producing the accompanying promotional video. Currently developing the campaign for the D&amp;D Open tournaments (JP &amp; SP), having completed the launch video and now producing a series of follow-up posters.</p>
+      <div class="pills">
+        <span class="pill">Facebook management</span>
+        <span class="pill">Campaign support</span>
+        <span class="pill">Video editing</span>
       </div>
-      <div class="about-grid">
-        <div>
-          <p>I am an administrative professional who also manages digital marketing and content for grassroots organisations — applying the same consistency and attention to detail across both, whether maintaining organised systems and records or keeping a content calendar on schedule.</p>
-          <p>My hands-on experience spans typing, document preparation, and general office support, paired with several years of self-taught digital marketing and content writing, built entirely on a zero-budget, results-first basis.</p>
-          <p>For D&amp;D specifically, the role extends well beyond content and campaigns — serving as the association's main point of contact, maintaining its databases, capturing and processing data accurately, and managing all correspondence.</p>
-          <p>I run <strong>ChessChat</strong>, a community storytelling site and social presence built around the tagline "Every Player Has a Story," managing promotion and content for two chess organisations. That work has sharpened exactly the skills a busy office or remote team needs: organising information clearly, writing copy that lands, keeping platforms consistent, and following through without being chased.</p>
-          <p>I am now looking to bring that same reliability to a remote administrative, marketing, or content support role.</p>
-        </div>
-        <div class="about-card">
-          <span class="label">Ways of working</span>
-          <ul>
-            <li>Primary point of contact for stakeholders and members</li>
-            <li>Database maintenance and accurate data capture</li>
-            <li>Strong written communication — copy, correspondence, documentation</li>
-            <li>Self-starter — used to working with limited resources and no supervision</li>
-            <li>Quick to learn new tools, including Airtable and AI assistants like ChatGPT and Claude</li>
-          </ul>
-        </div>
+      <div class="work-links">
+        <a href="https://www.facebook.com/DDSchoolChess/" target="_blank" rel="noopener">Visit Page ↗</a>
       </div>
-    </section>
+    </div>
 
-    <section id="skills">
-      <div class="sec-head">
-        <h2>Core Skills</h2>
-        <span class="label">02 — Capabilities</span>
-        <div class="sec-line"></div>
+    <div class="work-item">
+      <h3>North Coast Chess Club</h3>
+      <div class="role">Facebook &amp; Instagram page management and content</div>
+      <p class="desc">Manage the club's Facebook and Instagram presence — posting club updates and photos, engaging members, and promoting club activities and events to grow a small but active local audience.</p>
+      <div class="pills">
+        <span class="pill">Facebook management</span>
+        <span class="pill">Instagram content</span>
+        <span class="pill">Community engagement</span>
       </div>
-      <div class="skills-grid">
-        <div class="skill-card" style="--tab-color:var(--ink);">
-          <h3>Administration</h3>
-          <ul>
-            <li>Data capture &amp; typing (accurate, high-volume)</li>
-            <li>Document preparation &amp; formatting</li>
-            <li>Database maintenance &amp; records management</li>
-            <li>Scheduling &amp; general admin support</li>
-            <li>Correspondence &amp; inbox management</li>
-            <li>Airtable database administration</li>
-          </ul>
-        </div>
-        <div class="skill-card" style="--tab-color:var(--brass);">
-          <h3>Digital Marketing</h3>
-          <ul>
-            <li>Social media management (Facebook &amp; Instagram)</li>
-            <li>Zero-budget, grassroots growth strategy</li>
-            <li>Campaign &amp; event promotion</li>
-            <li>Community engagement &amp; page moderation</li>
-            <li>Canva &amp; HubSpot (self-taught)</li>
-          </ul>
-        </div>
-        <div class="skill-card" style="--tab-color:var(--green);">
-          <h3>Content Writing</h3>
-          <ul>
-            <li>Blog &amp; community storytelling</li>
-            <li>WordPress site management</li>
-            <li>Copywriting for promotional material</li>
-            <li>SEO-aware writing</li>
-            <li>Editing &amp; proofreading</li>
-            <li>AI tools (ChatGPT &amp; Claude) for research and drafting</li>
-          </ul>
-        </div>
+      <div class="work-links">
+        <a href="https://www.facebook.com/ncchessclub" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="https://www.instagram.com/ncchessclub/" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
-    </section>
+    </div>
 
-    <section id="work">
-      <div class="sec-head">
-        <h2>Selected Work</h2>
-        <span class="label">03 — Where I've Made an Impact</span>
-        <div class="sec-line"></div>
+    <div class="work-item">
+      <h3>ChessChat — Facebook &amp; Instagram</h3>
+      <div class="role">Content creation &amp; audience engagement</div>
+      <p class="desc">Create and post content that extends ChessChat's storytelling into fast-moving social feeds — building audience engagement to support the wider ChessChat community project, with steady, organic growth since launch.</p>
+      <div class="pills">
+        <span class="pill">Content creation</span>
+        <span class="pill">Facebook</span>
+        <span class="pill">Instagram</span>
       </div>
-      <div class="files">
-
-        <div class="case-file">
-          <div class="order-badge">01</div>
-          <div class="file-body">
-            <span class="featured-badge">★ Featured campaign</span>
-            <h3>D&amp;D — Durban &amp; District School Chess Association</h3>
-            <span class="role">Social media management + campaign support &amp; video content</span>
-            <p>Manage the D&amp;D Facebook page and support the association's advertising campaigns — contributing creative direction (including proposing the redesign of the PoT campaign poster with imagery of past delegates and endorsement quotes) and producing the accompanying promotional video. Currently developing the campaign for the D&amp;D Open tournaments (JP &amp; SP), having completed the launch video and now producing a series of follow-up posters.</p>
-            <div class="chips">
-              <span class="chip">Facebook management</span>
-              <span class="chip">Campaign support</span>
-              <span class="chip">Video editing</span>
-            </div>
-          </div>
-          <a class="file-link" href="https://www.facebook.com/DDSchoolChess/" target="_blank" rel="noopener">Visit Page ↗</a>
-        </div>
-
-        <div class="case-file">
-          <div class="order-badge">02</div>
-          <div class="file-body">
-            <h3>North Coast Chess Club</h3>
-            <span class="role">Facebook page management &amp; content</span>
-            <p>Manage the club's Facebook presence — posting consistently, engaging members, and promoting club activities and events to grow a small but active local audience.</p>
-            <div class="chips">
-              <span class="chip">Facebook management</span>
-              <span class="chip">Community engagement</span>
-            </div>
-          </div>
-          <a class="file-link" href="https://www.facebook.com/ncchessclub" target="_blank" rel="noopener">Visit Page ↗</a>
-        </div>
-
-        <div class="case-file">
-          <div class="order-badge">03</div>
-          <div class="file-body">
-            <h3>ChessChat — Instagram</h3>
-            <span class="role">Content creation &amp; audience engagement</span>
-            <p>Create and post content that extends ChessChat's storytelling into a visual, fast-moving feed — building audience engagement to support the wider ChessChat community project.</p>
-            <div class="chips">
-              <span class="chip">Content creation</span>
-              <span class="chip">Instagram</span>
-            </div>
-          </div>
-          <a class="file-link" href="https://www.instagram.com/chesschatofficial/" target="_blank" rel="noopener">Visit Page ↗</a>
-        </div>
-
-        <div class="case-file">
-          <div class="order-badge">04</div>
-          <div class="file-body">
-            <h3>ChessChat — WordPress Blog</h3>
-            <span class="role">Storytelling, writing, SEO &amp; site management</span>
-            <p>Own and run chesschat6.wordpress.com — a chess community storytelling site built on the tagline "Every Player Has a Story." Responsible for writing, SEO tagging, site structure, and ongoing content strategy, all on a zero-budget basis.</p>
-            <div class="chips">
-              <span class="chip">WordPress</span>
-              <span class="chip">Blog writing</span>
-              <span class="chip">SEO</span>
-            </div>
-          </div>
-          <a class="file-link" href="https://chesschat6.wordpress.com" target="_blank" rel="noopener">Visit Site ↗</a>
-        </div>
-
+      <div class="work-links">
+        <a href="https://www.facebook.com/ChessChatOfficial" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="https://www.instagram.com/chesschatofficial/" target="_blank" rel="noopener">Instagram ↗</a>
       </div>
-    </section>
+    </div>
 
-    <section id="contact">
-      <div class="sec-head">
-        <h2>Contact</h2>
-        <span class="label">04 — Get In Touch</span>
-        <div class="sec-line"></div>
+    <div class="work-item">
+      <h3>ChessChat — WordPress Blog</h3>
+      <div class="role">Storytelling, writing, SEO &amp; site management</div>
+      <p class="desc">Own and run chesschat6.wordpress.com — a chess community storytelling site built on the tagline "Every Player Has a Story." Responsible for writing, SEO tagging, site structure, and ongoing content strategy, all on a zero-budget basis.</p>
+      <div class="pills">
+        <span class="pill">WordPress</span>
+        <span class="pill">Blog writing</span>
+        <span class="pill">SEO</span>
       </div>
-      <div class="contact-card">
-        <div>
-          <h2>Let's work together.</h2>
-          <p>Open to remote administrative, digital marketing, and content writing roles. Reach out directly or connect below.</p>
-        </div>
-        <div class="contact-links">
-          <a class="btn btn-primary" href="mailto:joelenewilson4@gmail.com">Email Me</a>
-          <a class="btn btn-ghost" href="https://wa.me/27794998042" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+      <div class="work-links">
+        <a href="https://chesschat6.wordpress.com" target="_blank" rel="noopener">Visit Site ↗</a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <footer>Joelene Wilson · Executive Administrative Professional · Built for remote work opportunities</footer>
+<section id="contact">
+  <div class="wrap contact-box">
+    <div class="eyebrow" style="text-align:center;">04 — Get In Touch</div>
+    <h2>Let's work together.</h2>
+    <p>Open to remote administrative, digital marketing, and content writing roles. Reach out directly or connect below.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-primary" href="mailto:joelenewilson4@gmail.com">Email Me</a>
+      <a class="btn btn-ghost" href="https://wa.me/27794998042" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/joelenewilson-va/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
 
-  </main>
-</div>
-
-<script>
-  // Scroll-reveal for sections
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12 });
-  sections.forEach(s => observer.observe(s));
-
-  // Active tab highlighting
-  const tabs = document.querySelectorAll('.tab');
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const id = entry.target.getAttribute('id');
-      const tab = document.querySelector('.tab[data-target="' + id + '"]');
-      if (!tab) return;
-      if (entry.isIntersecting){
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-      }
-    });
-  }, { threshold: 0.4, rootMargin: '-10% 0px -60% 0px' });
-  sections.forEach(s => navObserver.observe(s));
-</script>
+<footer>
+  Joelene Wilson · Virtual Assistant | Administrative Support | Content Creation &amp; Social Media Management · Built for remote work opportunities
+</footer>
 
 </body>
 </html>
