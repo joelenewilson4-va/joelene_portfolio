@@ -88,10 +88,12 @@
   .work-links a { color: var(--sage-dark); }
 
   .media-heading { font-family: 'Segoe UI', sans-serif; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-dark); margin: 34px 0 16px; }
-  .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 18px; }
-  .media-card { background: var(--card); border: 1px solid var(--border); box-shadow: 3px 3px 0 var(--sage-line); overflow: hidden; text-decoration: none; display: block; }
-  .media-card .thumb { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; border-bottom: 1px solid var(--border); }
-  .media-card .thumb.doc { object-position: top; }
+  .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 18px; align-items: start; }
+  .media-card { background: var(--card); border: 1px solid var(--border); box-shadow: 3px 3px 0 var(--sage-line); overflow: hidden; text-decoration: none; display: flex; flex-direction: column; }
+  .media-card .thumb-wrap { height: 300px; background: #1c1c18; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--border); }
+  .media-card .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .media-card .thumb-wrap img.doc { object-position: top; }
+  .media-card .thumb-wrap iframe { height: 100%; width: auto; aspect-ratio: 9/16; border: 0; }
   .media-card .meta { padding: 12px 14px; }
   .media-card .meta .kind { font-family: 'Segoe UI', sans-serif; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
   .media-card .meta h4 { font-size: 15px; margin-bottom: 3px; color: var(--ink); }
@@ -106,8 +108,6 @@
   .case-images img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 1px solid var(--border); display: block; }
   .case-images .step-lbl { font-family: 'Segoe UI', sans-serif; font-size: 11px; color: var(--sub); text-transform: uppercase; letter-spacing: 0.05em; text-align: center; margin-top: 7px; }
   .case-images .step-lbl b { display: block; color: var(--sage-dark); font-size: 12px; margin-bottom: 1px; }
-  .video-card .thumb { aspect-ratio: 9/16; }
-  .video-card iframe { width: 100%; aspect-ratio: 9/16; display: block; border: 0; border-bottom: 1px solid var(--border); }
   @media (max-width: 700px) { .media-grid { grid-template-columns: 1fr 1fr; } }
 
   .contact { text-align: center; padding: 44px 0 10px; }
@@ -247,15 +247,19 @@
     <div class="media-heading">Recent samples</div>
     <div class="media-grid">
       <div class="media-card video-card">
-        <iframe src="https://www.youtube-nocookie.com/embed/FwHzCEcYJDg" title="D&amp;D Opens 2026 teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <div class="thumb-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/FwHzCEcYJDg" title="D&amp;D Opens 2026 teaser" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
         <div class="meta">
           <div class="kind">Video</div>
           <h4>D&amp;D Opens 2026 Teaser</h4>
-          <p>Written, filmed &amp; edited — YouTube Shorts</p>
+          <p>Clipped, edited &amp; produced in CapCut — YouTube Shorts</p>
         </div>
       </div>
       <a class="media-card" href="dd-newsletter.pdf" target="_blank" rel="noopener">
-        <img class="thumb doc" src="newsletter-thumb.jpg" alt="D&amp;D Community Update newsletter, August 2026">
+        <div class="thumb-wrap">
+          <img class="doc" src="newsletter-thumb.jpg" alt="D&amp;D Community Update newsletter, August 2026">
+        </div>
         <div class="meta">
           <div class="kind">Newsletter</div>
           <h4>D&amp;D Community Update</h4>
@@ -263,11 +267,13 @@
         </div>
       </a>
       <a class="media-card" href="fight-night-flyer.jpg" target="_blank" rel="noopener">
-        <img class="thumb" src="fight-night-flyer.jpg" alt="North Coast Chess Club Fight Night simul event promotional flyer">
+        <div class="thumb-wrap">
+          <img src="fight-night-flyer.jpg" alt="North Coast Chess Club Fight Night simul event promotional flyer">
+        </div>
         <div class="meta">
           <div class="kind">Flyer</div>
           <h4>NCCC "Fight Night" Simul</h4>
-          <p>Designed in Canva — event promotion</p>
+          <p>Concept &amp; art direction — AI-generated design</p>
         </div>
       </a>
     </div>
@@ -275,7 +281,7 @@
     <div class="case-study">
       <div class="kind">Campaign case study</div>
       <h4>NCCC Simultaneous Exhibition — Coach Prince</h4>
-      <p>Same event, three purposes: a bold Instagram teaser to catch attention, a Facebook version tailored to that platform's audience and format, and a results recap once the simul was done — 19 challengers, 0 losses, 5 draws.</p>
+      <p>Same event, three purposes: a bold Instagram teaser to catch attention, a Facebook version tailored to that platform's audience and format, and a results recap once the simul was done — 19 challengers, 0 losses, 5 draws. Concept and art direction by me; artwork AI-generated.</p>
       <div class="case-images">
         <a class="step" href="fight-night-flyer.jpg" target="_blank" rel="noopener">
           <img src="fight-night-flyer.jpg" alt="Instagram announcement flyer for the Fight Night simul event">
